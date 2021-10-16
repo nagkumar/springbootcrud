@@ -10,11 +10,11 @@ import java.util.List;
 @Service
 public class TodoServiceImpl implements TodoService
 {
-    TodoRepository todoRepository;
+    final TodoRepository todoRepository;
 
-    public TodoServiceImpl(TodoRepository todoRepository)
+    public TodoServiceImpl(final TodoRepository aTodoRepository)
     {
-	this.todoRepository = todoRepository;
+	todoRepository = aTodoRepository;
     }
 
     @Override
@@ -41,7 +41,7 @@ public class TodoServiceImpl implements TodoService
     public void updateTodo(Long id, Todo todo)
     {
 	Todo todoFromDb = todoRepository.findById(id).get();
-	System.out.println(todoFromDb.toString());
+	System.out.println(todoFromDb);
 	todoFromDb.setTodoStatus(todo.getTodoStatus());
 	todoFromDb.setDescription(todo.getDescription());
 	todoFromDb.setTitle(todo.getTitle());

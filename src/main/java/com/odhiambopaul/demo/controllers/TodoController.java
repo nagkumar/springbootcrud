@@ -20,11 +20,11 @@ import java.util.List;
 @RequestMapping("/api/v1/todo")
 public class TodoController
 {
-    TodoService todoService;
+    final TodoService todoService;
 
-    public TodoController(TodoService todoService)
+    public TodoController(final TodoService aTodoService)
     {
-	this.todoService = todoService;
+	todoService = aTodoService;
     }
 
     //The function receives a GET request, processes it and gives back a list of Todo as a response.
