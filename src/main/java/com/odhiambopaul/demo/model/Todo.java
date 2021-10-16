@@ -18,7 +18,8 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Todo {
+public class Todo
+{
     @Id
     @GeneratedValue
     @Column(length = 36, columnDefinition = "varchar", updatable = false, nullable = false)

@@ -1,5 +1,6 @@
 package com.odhiambopaul.demo.model;
 
-public enum TodoStatus {
+public enum TodoStatus
+{
     COMPLETED, NOT_COMPLETED
 }

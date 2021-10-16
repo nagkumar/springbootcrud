@@ -4,7 +4,8 @@ import com.odhiambopaul.demo.model.Todo;
 
 import java.util.List;
 
-public interface TodoService {
+public interface TodoService
+{
     List<Todo> getTodos();
 
     Todo getTodoById(Long id);
