@@ -11,9 +11,9 @@ public class TodoLoader implements CommandLineRunner
 {
     public final TodoRepository todoRepository;
 
-    public TodoLoader(TodoRepository todoRepository)
+    public TodoLoader(final TodoRepository aTodoRepository)
     {
-	this.todoRepository = todoRepository;
+	todoRepository = aTodoRepository;
     }
 
     @Override
